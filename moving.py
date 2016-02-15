@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
 """
-Created on Sun Jun 28 23:06:56 2015
-Toad Supervised Learning
 @author: naoto-y
 """
 
