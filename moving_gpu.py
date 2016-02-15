@@ -58,18 +58,17 @@ loss_hist_moving = np.nan * np.zeros(N)
 
 plt.figure(1)
 for i in xrange(N):
-    # TEST for original network
+    # Test Data
     x_ = np.array(np.random.rand(n_test,1), dtype=np.float32)
     x = Variable(cuda.to_gpu(x_))
     t = Variable(cuda.to_gpu((x_ > 0.5).astype(np.int32)))
     
+    # TEST for original network
     loss, pred = model(x, t)
     loss_hist[i] = loss.data
     
     # TEST for moving-copy network    
-    model.zerograds()
     loss_moving, pred = model_moving(x, t)
-    #print "LOSS:::" ,loss_moving.data
     loss_hist_moving[i] = loss_moving.data
 
     
