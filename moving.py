@@ -3,9 +3,7 @@
 @author: naoto-y
 """
 
-import time
 import copy
-import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 import chainer
